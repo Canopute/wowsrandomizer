@@ -33,9 +33,3 @@ Fields:
 - `nation`: string
 - `class`: string (e.g., Battleship, Cruiser, Destroyer, Carrier)
 
-## Next steps
-
-- Expand `ships.json` to include the complete set of Tier X and XI ships.
-- Optional filters: class, nation, exclude specific lines, etc.
-
-If you want, tell me to populate the full dataset and I’ll update `ships.json` accordingly.
