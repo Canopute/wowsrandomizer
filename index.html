@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WoWS Tier X/XI Randomizer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>World of Warships - Tier X/XI Randomizer</h1>
+      <p class="subtitle">Click the button to get a random Tier X or Supership (XI).</p>
+    </header>
+
+    <section class="controls">
+      <div class="control-group">
+        <span class="label">Tiers</span>
+        <label class="checkbox">
+          <input type="checkbox" id="tier10" checked />
+          <span>Tier X</span>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" id="tier11" checked />
+          <span>Tier XI (Superships)</span>
+        </label>
+      </div>
+
+      <div class="control-group" id="classFilterGroup">
+        <span class="label">Class</span>
+        <div id="classFilters"></div>
+      </div>
+
+      <div class="control-group" id="nationFilterGroup">
+        <span class="label">Nation</span>
+        <div id="nationFilters"></div>
+      </div>
+
+      <label class="checkbox" title="Avoid picking the same ship twice in a row">
+        <input type="checkbox" id="noRepeat" checked />
+        <span>No immediate repeats</span>
+      </label>
+
+      <button id="enrichBtn" class="btn-primary" title="Fetch Nation/Class from the WoWS wiki and cache locally">Enrich metadata (online)</button>
+      <button id="randomizeBtn" class="btn-primary">Randomize</button>
+    </section>
+
+    <section id="result" class="result hidden">
+      <div class="card">
+        <div class="ship-name" id="shipName">—</div>
+        <div class="ship-meta" id="shipMeta">—</div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>
+        Works offline with embedded data. "Enrich metadata" requires internet and stores results in your browser.
+      </small>
+    </footer>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
